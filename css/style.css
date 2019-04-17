@@ -1,0 +1,77 @@
+*{
+	margin:0px;
+	padding: 0px;
+}
+#header{
+	width: 500px;
+	background-color: yellow;
+	/*text-align: center;*/
+	border: 2px solid red;
+	/*padding: 10px auto;*/
+	margin:0 auto;
+
+}
+#header .title{
+	color: #8f7a66;
+	text-align: center;
+	/*margin: 0 auto;*/
+	border: 2px solid green;
+	font: bold 50px Arial ;
+}
+#header .author{
+	width: 100%;
+	margin: 0 auto;
+	margin-left: 66%;
+	border: 2px solid red
+}
+#header .wrapper{
+	position: relative;
+	font: bold 18px Arial;
+	color: white;
+}
+
+#header .score-wrappers{
+	background: #8f7a66;
+	display:inline-block;
+	border-radius: 6px;
+	padding: 10px 20px;
+}
+
+#header .newGame{
+	position: absolute;
+	right: 0px;
+	background: #8f7a66;
+	display:inline-block;
+	border-radius: 6px;
+	padding: 10px 20px;
+}
+
+#grid-container{
+	width: 500px;
+	height: 500px;
+	margin: 10px auto;
+	background-color: rgb(235,235,235);
+	border-radius: 10px;
+	position: relative;
+}
+
+#grid-container .grid-box{
+	width: 100px;
+	height: 100px;
+	
+	background-color: #ccc;
+	border-radius: 5px;
+	position: absolute;
+}
+
+#grid-container .upperBox{
+	width: 100px;
+	height: 100px;
+	
+	
+	border-radius: 5px;
+	position: absolute;
+	font: bold 50px Arial;
+	text-align: center;
+	line-height: 100px;
+}
