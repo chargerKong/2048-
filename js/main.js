@@ -13,6 +13,7 @@ function init(){
 }
 
 function newGame(){
+	$(".upperBox").remove();
 	//初始化底层页面
 	for(var i=1;i<5;i++){
 		for(var j=1;j<5;j++){
