@@ -6,10 +6,14 @@ $(function(){
 
 function init(){
 	newGame();
+	getRandSeq();
+	getRandSeq();	
+
+	
 }
 
 function newGame(){
-	//初始化页面
+	//初始化底层页面
 	for(var i=1;i<5;i++){
 		for(var j=1;j<5;j++){
 			$("#grid-container #grid-box-"+i+"-"+j).css({
@@ -25,15 +29,7 @@ function newGame(){
 			arr[i][j]=0;
 		}
 	}
-	//随机生成4或者8
-	// var randSeq=getRandSeq();
-	// var randSeq1=getRandSeq();
-	// while(randSeq==randSeq1){
-	// 	randSeq1=getRandSeq();
-	// }
-	getRandSeq();
-	getRandSeq();	
-	
+
 	//安排上层格子
 	update();
 }
@@ -44,13 +40,12 @@ function update(){
 			row=i+1;column=j+1;
 			var node=$("<div class='upperBox' id='upperBox-"+row+"-"+column+"'></div>");
 			$("#grid-container").append(node);
-			
 			if(arr[i][j]==0){
 				$("#upperBox-"+row+"-"+column).css({
 					"width":0,
 					"height":0,
-					"top":getPosTop(row,column),
-					"left":getPosLeft(row,column),
+					"top":getPosTop(row,column)+50,
+					"left":getPosLeft(row,column)+50,
 				})
 			}else{
 				$("#upperBox-"+row+"-"+column).css({
@@ -82,14 +77,15 @@ function getRandSeq(){
 	}
 	
 	var num1=Math.floor(Math.random()*count);
-	console.log(num1);
-	var row=(arrTem[num1]/4);
+	
+	var row=Math.floor(arrTem[num1]/4);
 	var column=arrTem[num1]%4;
 	
 	//随机生成2或者4
 	TwoOrF=Math.random()>=0.5?2:4;
+	arr[row][column]=TwoOrF;
 
-	arr[row,column]=TwoOrF;
+	showBox(row,column,TwoOrF)
 	// var i1=(Math.floor(Math.random()*4));
 	// var i2=(Math.floor(Math.random()*4));
 	// num=Math.ceil((Math.random()*2))*2
