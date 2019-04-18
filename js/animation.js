@@ -10,3 +10,12 @@ function showBox(i,j,TwoOrF){
 		"color":getTextColor(TwoOrF),
 	}).text(TwoOrF)
 }
+
+function move(orgx,orgy,tox,toy){
+	row=orgx+1;column=orgy+1;
+	$("#upperBox-"+row+"-"+column).animate({
+		'top':getPosTop(tox+1,toy+1),
+		'left':getPosLeft(tox+1,toy+1),
+	},200)
+	
+}

@@ -42,3 +42,25 @@ function noSpace(){
 
 	return true;
 }
+
+function IscrossNull(minx,miny,maxx,maxy){
+	if (minx==maxx){
+		var sum=0;
+		for(var j=miny+1;j<maxy;j++){
+			sum=sum+arr[minx][j];
+		}
+		
+	}else if (miny==maxy) {
+		var sum=0;
+		for (var i=minx+1;i<maxx;i++){
+			sum=sum+arr[i][maxy];
+		}
+	}
+	if (sum==0){
+			return true;
+		}else {
+			return false;
+	}
+
+}
+

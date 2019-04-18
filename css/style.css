@@ -6,7 +6,6 @@
 	width: 500px;
 	background-color: yellow;
 	/*text-align: center;*/
-	border: 2px solid red;
 	/*padding: 10px auto;*/
 	margin:0 auto;
 
@@ -15,14 +14,12 @@
 	color: #8f7a66;
 	text-align: center;
 	/*margin: 0 auto;*/
-	border: 2px solid green;
 	font: bold 50px Arial ;
 }
 #header .author{
 	width: 100%;
 	margin: 0 auto;
 	margin-left: 66%;
-	border: 2px solid red
 }
 #header .wrapper{
 	position: relative;
