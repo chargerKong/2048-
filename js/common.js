@@ -1,9 +1,9 @@
 function getPosTop(i,j){
-	return 20+120*(i-1);
+	return cellSpace+(documentWidth*0.24)*(i-1);
 }
 
 function getPosLeft(i,j){
-	return 20+120*(j-1);
+	return cellSpace+(documentWidth*0.24)*(j-1);
 }
 
 function getBgColor(num){
@@ -64,3 +64,9 @@ function IscrossNull(minx,miny,maxx,maxy){
 
 }
 
+function isGameOver(canmove){
+	if(noSpace()&& !canmove){
+		alert('游戏结束');
+		init();
+	}
+}
