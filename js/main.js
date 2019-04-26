@@ -1,9 +1,9 @@
-//获取移动端的尺寸
+﻿//获取移动端的尺寸
 //屏幕的宽度	
 window.screen.availWidth;
 var documentWidth=document.documentElement.clientWidth;
 if (documentWidth>1500){
-	documentWidth=1500;
+	documentWidth=500;
 }
 var cellWidth=documentWidth*0.2;
 var containerWidth=documentWidth*0.92;
@@ -14,12 +14,13 @@ var cellSpace=documentWidth*0.04;
 //定义存储上层数字的数组
 var arr=new Array();
 var chage=new Array();
-var score=0;
+
 $(function(){
 	init();
 })
 
 function init(){
+	var score=0;
 	setMobile();
 	newGame();
 	getRandSeq();
